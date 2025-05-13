@@ -1,0 +1,23 @@
+.app-container {
+  height: 100%;
+}
+
+.aboutus-container {
+  display: flex;
+  height: 30em;
+  min-height: 25em;
+  border-bottom: 0.5px solid #dcdcdc;
+}
+
+.slide-show-container {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  /* border-right: 0.5px solid #dcdcdc; */
+}
+
+.infos-container {
+  height: 100%;
+  width: 65%;
+  padding: 3em;
+}
