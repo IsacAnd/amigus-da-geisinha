@@ -11,63 +11,59 @@ function Products() {
       desc: "Dragão de crochê feito à mão, linha 12 col",
       price: 45,
       available: true,
+      favorite: true,
     },
     {
       title: "Urso fofo",
       desc: "Urso de crochê rosa claro feito com linha premium",
       price: 38,
       available: true,
+      favorite: true,
     },
-
     {
       title: "Polvo bebê",
       desc: "Polvo de crochê ideal para berços, feito com linha antialérgica",
       price: 30,
       available: true,
+      favorite: false,
     },
-
     {
       title: "Chaveiro de coração",
       desc: "Mini coração de crochê para chaveiro, diversas cores",
       price: 10,
       available: false,
+      favorite: false,
     },
-
     {
       title: "Gatinho de crochê",
       desc: "Gato cinza feito à mão com olhos bordados",
       price: 42,
       available: true,
+      favorite: false,
     },
-
     {
       title: "Cacto decorativo",
       desc: "Cacto de crochê em vasinho, ótimo para decoração",
       price: 25,
       available: true,
+      favorite: false,
     },
-
     {
       title: "Coelho de Páscoa",
       desc: "Coelhinho de crochê com orelhas grandes e fofas",
       price: 50,
       available: false,
+      favorite: false,
     },
-
-    // {
-    //   title: "Bola sensorial",
-    //   desc: "Bola de crochê com texturas para bebês explorarem",
-    //   price: 22,
-    //   available: true,
-    // },
-
-    // {
-    //   title: "Kit mini bichinhos",
-    //   desc: "Conjunto com 3 mini amigurumis sortidos",
-    //   price: 60,
-    //   available: true,
-    // },
   ]);
+
+  function onChangeFavorited(index) {
+    setProducts(
+      products.map((prod, id) =>
+        id === index ? { ...prod, favorite: !prod.favorite } : prod
+      )
+    );
+  }
 
   return (
     <div className="products-container">
@@ -94,8 +90,8 @@ function Products() {
               <div className="product-description">
                 <div className="prod-title">
                   <h4>{prod.title}</h4>
-                  <button>
-                    <Heart size={20} />
+                  <button onClick={() => onChangeFavorited(index)}>
+                    <Heart className={prod.favorite && "favorited"} size={20} />
                   </button>
                 </div>
                 <div className="prod-info">
@@ -104,6 +100,7 @@ function Products() {
                 </div>
                 <div className="prod-action">
                   <button>
+                    Adicionar ao carrinho
                     <ShoppingCart />
                   </button>
                 </div>

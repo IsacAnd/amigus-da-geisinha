@@ -16,6 +16,11 @@
   justify-content: space-between;
 }
 
+.favorited {
+  fill: #ff4141;
+  color: #ff4141;
+}
+
 #products-title {
   margin-bottom: 1em;
   color: rgb(255, 167, 239);
@@ -80,14 +85,18 @@
 .prod-action button {
   width: 100%;
   height: 100%;
-  padding: 0.4em;
+  padding: 0.5em 1em;
   margin: 0.5em 0;
   background-color: rgb(125, 255, 65);
-  border-radius: 1em;
+  border-radius: 2em;
   justify-content: center;
+  align-items: center;
   display: inline-flex;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  gap: 0.5em;
 }
 
 .prod-action button:hover {
