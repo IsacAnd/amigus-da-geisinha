@@ -14,6 +14,10 @@
   color: rgb(255, 167, 239);
 }
 
+#logo-img {
+  width: 5em;
+}
+
 #navigation-options {
   display: flex;
   list-style: none;

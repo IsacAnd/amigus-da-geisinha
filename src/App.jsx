@@ -2,6 +2,7 @@ import "./App.css";
 import Slideshow from "./components/SlideShow";
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
+import Products from "./components/Products";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
           <AboutUs />
         </div>
       </section>
-      <section className="products-container">
-        <h2>Nossos produtos feitos com muito amor 💕! </h2>
+      <section>
+        <Products />
       </section>
       <footer></footer>
     </div>

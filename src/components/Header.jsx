@@ -1,11 +1,12 @@
 import "../styles/header.css";
+import logo from "../img/logo3.png";
 
 function Header() {
   return (
     <header className="header-container">
       <div className="logo-container">
-        {/* <img id="logo-img" src="" alt="" /> */}
-        <h3>Amigus da Geisinha</h3>
+        <img id="logo-img" src={logo} alt="" />
+        <h2>Amigus da Geisinha</h2>
       </div>
       <nav className="navigation-container">
         <ul id="navigation-options">
