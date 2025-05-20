@@ -3,6 +3,7 @@ import Slideshow from "./components/SlideShow";
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
 import Products from "./components/Products";
+import Orders from "./components/Orders";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </section>
       <section>
         <Products />
+      </section>
+      <section>
+        <Orders />
       </section>
       <footer></footer>
     </div>
