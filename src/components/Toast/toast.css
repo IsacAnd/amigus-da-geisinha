@@ -1,0 +1,47 @@
+.toast-container {
+  display: flex;
+  position: fixed;
+  right: 4vh;
+  bottom: 4vh;
+  padding: 0.8em;
+  gap: 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
+  animation: slide-in 0.15s ease-in-out;
+}
+
+.message {
+  display: inline-flex;
+  color: #fff;
+  font-weight: bold;
+}
+
+.img {
+  display: inline-flex;
+}
+
+.invisible {
+  display: none;
+}
+
+.success {
+  background-color: #7eff57;
+}
+
+.failure {
+  background-color: #ff5757;
+}
+
+.alert {
+  background-color: #fff457;
+}
+
+@keyframes slide-in {
+  from {
+    bottom: -50px;
+  }
+
+  to {
+    bottom: 30px;
+  }
+}
