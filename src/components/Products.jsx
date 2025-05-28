@@ -3,7 +3,7 @@ import "../styles/products.css";
 import product from "../img/amigurumi.jpg";
 import { Heart } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
-import { useToast } from "./Toast/ToastContext";
+import { ToastContext } from "../components/Toast/ToastContext.jsx";
 
 function Products() {
   const [products, setProducts] = useState([
@@ -57,7 +57,7 @@ function Products() {
       favorite: false,
     },
   ]);
-  const { showToast } = useToast();
+  const { showToast } = useContext(ToastContext);
 
   function onChangeFavorited(index) {
     setProducts(
@@ -101,9 +101,7 @@ function Products() {
                   <p>{prod.desc}</p>
                 </div>
                 <div className="prod-action">
-                  <button
-                    onClick={() => showToast("success", "Produto adicionado!")}
-                  >
+                  <button onClick={() => showToast("success", "Sucesso!")}>
                     Adicionar ao carrinho
                     <ShoppingCart />
                   </button>

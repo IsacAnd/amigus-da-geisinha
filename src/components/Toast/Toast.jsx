@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "./toast.css";
 import { CircleAlert } from "lucide-react";
 import { CircleX } from "lucide-react";
